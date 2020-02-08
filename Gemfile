@@ -38,7 +38,29 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # pryを使う
+  gem 'pry-rails'
+  #pryが見やすくなる
+  gem 'awesome_rails_console'
+  #modelを見やすくする
+  gem 'annotate'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# bootstrapを使う
+gem 'bootstrap'
+gem 'jquery-rails'
+
+#画像アップロード
+gem 'carrierwave'
+# gem 'fog'
+gem 'mini_magick'
+
+#パスワードの設定
+gem 'bcrypt', '~> 3.1.7'
+
+#slimを仕様する
+gem 'slim-rails'
+gem 'html2slim'
