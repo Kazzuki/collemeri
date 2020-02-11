@@ -58,9 +58,9 @@ gem 'carrierwave'
 # gem 'fog'
 gem 'mini_magick'
 
-#パスワードの設定
-gem 'bcrypt', '~> 3.1.7'
-
 #slimを仕様する
 gem 'slim-rails'
 gem 'html2slim'
+
+#ログイン機能
+gem 'authlogic', '~> 5.0', '>= 5.0.4'
