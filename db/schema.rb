@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_14_154751) do
+ActiveRecord::Schema.define(version: 2020_02_15_075349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 2020_02_14_154751) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_books_on_user_id"
+  end
+
+  create_table "forms", force: :cascade do |t|
+    t.bigint "form_uid"
+    t.bigint "to_uid"
+    t.bigint "book_id", null: false
+    t.string "place"
+    t.date "day"
+    t.time "time"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_forms_on_book_id"
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -55,4 +68,7 @@ ActiveRecord::Schema.define(version: 2020_02_14_154751) do
     t.string "introduction"
   end
 
+  add_foreign_key "forms", "books"
+  add_foreign_key "forms", "users", column: "form_uid"
+  add_foreign_key "forms", "users", column: "to_uid"
 end
