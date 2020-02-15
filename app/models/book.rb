@@ -18,5 +18,6 @@
 
 class Book < ApplicationRecord
     has_one :subject, dependent: :destroy
+    has_one :form, dependent: :destroy
     belongs_to :user
 end

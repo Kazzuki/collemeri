@@ -26,4 +26,6 @@
 
 class Form < ApplicationRecord
   belongs_to :book
+  belongs_to :from_user, class_name: "User", foreign_key: 'form_uid'
+  belongs_to :to_user, class_name: "User", foreign_key: 'to_uid'
 end
