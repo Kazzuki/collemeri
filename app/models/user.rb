@@ -22,7 +22,7 @@
 
 class User < ApplicationRecord
     acts_as_authentic
-    has_many :books
-    has_many :app_form, class_name: 'Form', foreign_key: 'form_uid'
-    has_many :app_to, class_name: 'Form', foreign_key: 'to_uid'
+    has_many :books, dependent: :destroy
+    has_many :app_form, class_name: 'Form', foreign_key: 'form_uid', dependent: :destroy
+    has_many :app_to, class_name: 'Form', foreign_key: 'to_uid', dependent: :destroy
 end

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   namespace :user do
     resources :registrations, only: :create
     resources :sessions, only: :create
-    resources :mypage, only: %i[show edit update]
+    resource :mypages, only: %i[show edit update]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
