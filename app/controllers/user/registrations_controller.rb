@@ -6,7 +6,7 @@ class User::RegistrationsController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to "/"
+      redirect_to user_mypages_url
     else
       render action: :new
     end
@@ -14,6 +14,6 @@ class User::RegistrationsController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:email, :password)
+      params.require(:user).permit(:name, :email, :password)
     end
 end

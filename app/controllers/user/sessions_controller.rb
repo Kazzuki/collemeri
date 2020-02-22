@@ -1,12 +1,12 @@
 class User::SessionsController < ApplicationController
-def new
+  def new
     @user_session = UserSession.new
   end
 
   def create
     @user_session = UserSession.new(user_session_params.to_h)
     if @user_session.save
-      redirect_to "/"
+      redirect_to user_mypages_url
     else
       render :new
     end
