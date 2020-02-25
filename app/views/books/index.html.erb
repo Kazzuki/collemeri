@@ -1,0 +1,16 @@
+
+ <% @books&.each do |book| %>
+ <div class="card">
+    <%= image_tag book.image.to_s, size: '300x300', class:"card-img-top"%>
+  <div class="card-body">
+    <h4 class="card-title"><%=book.title%></h4>
+    <h6 class="card-subtitle mb-2 text-muted"><%=book.publisher%></h6>
+    <p class="card-text">
+      タグ、タグ、タグ、タグ
+    </p>
+   <%= link_to '詳細', book_path(book.id), class: "btn btn-success" %>
+   <%= link_to '編集', book_path(book.id), class: "btn btn-secondary" %>
+   <%= link_to '削除', book_path(book.id), method: :delete, data: {confirm: "削除しますか？"}, class: "btn btn-danger" %>
+  </div>
+ </div>
+ <% end %>

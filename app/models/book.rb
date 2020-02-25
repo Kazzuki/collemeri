@@ -17,6 +17,8 @@
 #
 
 class Book < ApplicationRecord
+    mount_uploader :image, ImagesUploader
+
     has_one :subject, dependent: :destroy
     has_one :form, dependent: :destroy
     belongs_to :user
