@@ -26,7 +26,7 @@
                   <%= link_to "ログアウト",sign_out_path, class: "nav-link", method: :delete%>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">マイページ</a>
+                  <%= link_to "マイページ",user_mypages_path, class: "nav-link"%>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">取引管理</a>
@@ -51,9 +51,7 @@
       </header>
 
       <div class="container" id="wrapper">
-        <main>
           <%= yield %>
-        </main>
       </div>
 
       <footer>

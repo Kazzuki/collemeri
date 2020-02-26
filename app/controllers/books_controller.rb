@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_books, only: [:destroy]
+  before_action :set_books, only: %i[show destroy]
 
   def index
     @books = User.find(current_user.id).books

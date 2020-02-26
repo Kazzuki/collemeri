@@ -1,11 +1,12 @@
-<h1>本詳細</h1>
-<div class="card">
-  <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">
-      ほしいボタンをクリックすると、注文表が発行される
-    </p>
-    <a href="#!" class="btn btn-primary">ほしい</a>
-  </div>
+<h1>本詳細&取引動線</h1>
+<div class="card"　style="width: 70%;">
+<%= image_tag @book.image.to_s, size: '300x300', class:"card-img-top"%>
+<div class="card-body">
+    <h4 class="card-title"><%=@book.title%></h4>
+    <h6 class="card-subtitle mb-2 text-muted"><%=@book.publisher%></h6>
+    <p class="card-text">タグ、タグ、タグ、タグ</p>
+    <p class="card-text">取引ボタンをクリックすると、注文表が発行される</p>
+    <%= link_to '戻る', "/", class: "btn btn-secondary" %>
+    <%= link_to '取引表を記入', book_path(@book.id), class: "btn btn-success" %>
+</div>
 </div>
