@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: collemeri_production
+  encoding: unicode
   username: collemeri
   password: <%= ENV['COLLEMERI_DATABASE_PASSWORD'] %>
