@@ -14,7 +14,7 @@ class User::SessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    redirect_to "/"
+    redirect_to root_path
   end
 
   private
