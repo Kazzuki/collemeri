@@ -68,4 +68,4 @@ gem 'authlogic', '~> 5.0', '>= 5.0.4'
 #DatetimePickerのUI
 gem 'bootstrap4-datetime-picker-rails'
 gem 'momentjs-rails'
-gem "font-awesome-rails"
+gem 'font-awesome-sass'
