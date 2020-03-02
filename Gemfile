@@ -64,3 +64,6 @@ gem 'html2slim'
 
 #ログイン機能
 gem 'authlogic', '~> 5.0', '>= 5.0.4'
+
+#DatetimePickerのUI
+ gem 'bootstrap4-datetime-picker-rails'
