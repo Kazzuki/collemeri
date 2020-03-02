@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'forms/new'
+  get 'forms/destroy'
   root 'top#index'
   get 'sign_in', to: 'user/sessions#new'
   delete 'sign_out', to: 'user/sessions#destroy'
