@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   delete 'sign_out', to: 'user/sessions#destroy'
   get 'sign_up', to: 'user/registrations#new'
 
+  resources :top, only: %i[show]
+
   namespace :user do
     resources :registrations, only: :create
     resources :sessions, only: :create
@@ -14,6 +16,6 @@ Rails.application.routes.draw do
 
   resources :books
 
-  resources :form, only: %i[new]
+  resources :forms, only: %i[new]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

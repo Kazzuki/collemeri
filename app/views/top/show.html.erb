@@ -6,6 +6,7 @@
     <h6 class="card-subtitle mb-2 text-muted"><%=@book.publisher%></h6>
     <p class="card-text">タグ、タグ、タグ、タグ</p>
     <p class="card-text">取引ボタンをクリックすると、注文表が発行される</p>
-    <%= link_to '戻る', books_path, class: "btn btn-secondary" %>
+    <%= link_to '戻る', root_path, class: "btn btn-secondary" %>
+    <%= link_to '取引表を記入', new_form_path(book_id: @book.id), class: "btn btn-success" %>
 </div>
 </div>

@@ -1,0 +1,34 @@
+<form>
+  <fieldset disabled>
+    <div class="form-group">
+      <label for="formGroupExampleInput">この本の所有者_ID</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder=<%= @book_user %>>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">この本のクライアント_ID</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= @customer %>>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">本ID</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder=<%= @book_id %>>
+    </div>
+  </fieldset>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">場所</label>
+    <select class="custom-select">
+        <option selected>受け渡し場所の選択</option>
+        <option value="1">食堂</option>
+        <option value="2">図書館</option>
+        <option value="3">生協</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">日付</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">時間</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </div>
+
+</form>
