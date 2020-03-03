@@ -14,3 +14,13 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+//= require moment
+//= require moment/ja.js
+//= require tempusdominus-bootstrap-4.js
+
+$(function () {
+    $('#datetimepicker4').datetimepicker({
+        format: 'L'
+    });
+});
